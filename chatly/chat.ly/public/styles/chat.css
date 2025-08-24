@@ -1,0 +1,364 @@
+:root {
+    --primary-color: rgb(160, 198, 254);
+    --accent-color: rgb(255, 255, 255);
+    --background-color: rgb(31, 31, 63);
+    --secondary-color: rgb(151, 63, 63);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    cursor: default;
+    overflow: hidden;
+
+    font-weight: 600;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #E8E8E8;
+    background: -webkit-linear-gradient(top, #E8E8E8, #9FC6FF);
+    background: -moz-linear-gradient(top, #E8E8E8, #9FC6FF);
+    background: linear-gradient(to bottom, #E8E8E8, #9FC6FF);
+}
+
+main {
+    height: 650px;
+    width: 1300px;
+
+    display: grid;
+    grid-template-columns: 300px 1000px;
+    gap: 20px;
+
+    background-color: transparent;
+    position: relative;
+
+    border-radius: 10px;
+    overflow: visible;
+
+}
+
+.members-joined {
+    height: 500px;
+    display: grid;
+    grid-template-rows: 80px 420px;
+    background-color: rgb(238, 238, 238);
+    border-radius: 10px;
+
+    box-sizing: border-box;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2);
+}
+
+.members {
+    height: auto;
+    overflow-y: scroll;
+}
+
+.members::-webkit-scrollbar {
+    width: 0.2vw;
+}
+
+.members::-webkit-scrollbar-thumb {
+    background-color: rgba(160, 198, 254, 0.9);
+}
+
+.members::-webkit-scrollbar-track {
+    background-color: rgba(160, 198, 254, 0.3);
+}
+
+.topic {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    background-color: rgb(160, 198, 254);
+
+    font-weight: bold;
+    font-size: 24px;
+
+    color: rgb(31, 31, 63);
+}
+
+.member {
+    margin: 20px;
+    color: rgb(31, 31, 63);
+
+    font-size: 16px;
+}
+
+.chat-area {
+    height: 100%;
+    width: 980px;
+    display: grid;
+    grid-template-rows: 80px 1fr 80px;
+    background-color: rgb(201, 221, 251);
+    border-radius: 10px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+header {
+    height: 80px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+
+    background-color: rgb(160, 198, 254);
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    text-align: start;
+    color: rgb(31, 31, 63);
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.chat-messages {
+    overflow-y: scroll;
+}
+
+.chat-messages::-webkit-scrollbar {
+    width: 0.2vw;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background-color: rgba(160, 198, 254, 0.9);
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background-color: rgba(160, 198, 254, 0.3);
+}
+
+/* the whole card that holds the message */
+.message-holder {
+    height: auto;
+    width: auto;
+    box-sizing: border-box;
+    padding: 10px 10px;
+    margin: 10px 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 10px;
+
+    background-color: var(--primary-color);
+}
+
+/* the text inside the message card */
+.message {
+    font-size: 17px;
+    color: rgb(31, 31, 63);
+}
+
+/* name of the messenger and the time at which he sent the message */
+.about {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+
+    box-sizing: border-box;
+    color: rgb(0, 16, 236);
+}
+
+/* name of the message sender */
+.name {
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(0, 16, 236);
+}
+
+.time {
+    font-size: 12px;
+}
+
+footer {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(160, 198, 254);
+}
+
+.input-field {
+    background-color: rgb(201, 221, 251);
+    border-radius: 10px;
+    width: 70%;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-field input {
+    outline: none;
+    width: 100%;
+    border: none;
+
+    background-color: transparent;
+    color: var(--background-color);
+    font-weight: 600;
+    font-size: 20px;
+    cursor: text;
+
+    box-sizing: border-box;
+    padding: 10px 20px;
+    margin-right: 40px;
+}
+
+.input-field button {
+    cursor: pointer;
+    background-color: rgb(172, 196, 233);
+    border-radius: 10px;
+    height: 40px;
+    width: 40px;
+    border: none;
+    outline: none;
+
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+
+    font-size: 20px;
+    color: black;
+}
+
+.input-field button i {
+    cursor: pointer;
+}
+
+@media(max-width: 1350px) {
+    main {
+        width: 1000px;
+
+        grid-template-columns: 250px 730px;
+    }
+
+    .chat-area {
+        height: 100%;
+        width: 730px;
+    }
+}
+
+@media(max-width: 1050px) {
+    main {
+        width: 800px;
+
+        grid-template-columns: 180px 600px;
+    }
+
+    .members-joined {
+        grid-template-rows: 60px 440px;
+        position: relative;
+    }
+
+    .topic {
+        height: 100%;
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 18px;
+    }
+
+    .member {
+        font-size: 14px;
+    }
+
+    .chat-area {
+        height: 100%;
+        width: 100%;
+        grid-template-rows: 60px 1fr 60px;
+        position: relative;
+    }
+
+    header {
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    /* the whole card that holds the message */
+    .message-holder {
+        margin: 10px 20px;
+    }
+
+    /* the text inside the message card */
+    .message {
+        font-size: 14px;
+    }
+
+    /* name of the messenger and the time at which he sent the message */
+    .about {
+        gap: 5px;
+    }
+
+    /* name of the message sender */
+    .name {
+        font-size: 12px;
+    }
+
+    .time {
+        font-size: 10px;
+    }
+
+    footer {
+        height: 100%;
+        width: 100%;
+    }
+
+    .input-field input {
+        font-size: 14px;
+
+        padding: 8px 15px;
+        margin-right: 30px;
+    }
+
+    .input-field button {
+        height: 25px;
+        width: 25px;
+        bottom: 3px;
+        right: 4px;
+
+        font-size: 14px;
+    }
+
+    .input-field button i {
+        cursor: pointer;
+    }
+}
+
+@media(max-width: 800px) {
+    main {
+        width: 400px;
+
+        grid-template-columns: 450px;
+        gap: 0px;
+    }
+
+    .members-joined {
+        display: none;
+    }
+
+    .chat-area {
+        width: 450px;
+    }
+}
